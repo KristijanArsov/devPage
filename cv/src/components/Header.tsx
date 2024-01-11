@@ -10,7 +10,7 @@ const Header = () => {
       <InnerWrapNavBar>
         <div className="col-4">
         <NavLink to={`/`} className="logo">
-          CV
+          Kristijan
         </NavLink>
         </div>
         
