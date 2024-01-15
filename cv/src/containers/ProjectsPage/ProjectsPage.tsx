@@ -1,9 +1,10 @@
 import React from 'react'
+import CardList from '../../components/CardList'
 
 const ProjectsPage = () => {
   return (
-    <div>
-      projects
+    <div className='row'>
+      <CardList/>
     </div>
   )
 }

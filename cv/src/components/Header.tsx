@@ -1,32 +1,47 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const location = useLocation();
 
   return (
-    <NavBarDiv className="py-3">
-      <InnerWrapNavBar>
-        <div className="col-4">
-        <NavLink to={`/`} className="logo">
-          Kristijan
-        </NavLink>
-        </div>
-        
-       
-        
-        <div className="col-4 d-flex filters justify-content-center align-items-center text-center">
+    <NavBarDiv className="navbar navbar-expand-lg">
+      <NavLink to={`/`} className="logo">
+        <ImgDiv src={`../images/Kabam_Logo.png`} />
+      </NavLink>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="filters navbar-nav mr-auto ml-auto">
           <NavLink
             to={`/`}
-            style={{ color: `${location.pathname === `/` ? `rgb(217, 142, 2)` : ``}` }}
+            style={{
+              color: `${location.pathname === `/` ? `red` : `rgb(217, 142, 2)`}`,
+              fontWeight: `${location.pathname == `/` ? '600': ''}`
+            }}
           >
             Home
           </NavLink>
+
           <NavLink
             to={`/aboutPage`}
             style={{
-              color: `${location.pathname === `/aboutPage` ? `rgb(217, 142, 2)` : ``}`,
+              color: `${
+                location.pathname === `/aboutPage` ? `red` : `rgb(217, 142, 2)`
+              }`,
+              fontWeight: `${location.pathname == `/aboutPage` ? '600': ''}`
             }}
           >
             About
@@ -34,15 +49,17 @@ const Header = () => {
           <NavLink
             to={`/projectsPage`}
             style={{
-              color: `${location.pathname === `/projectsPage` ? `rgb(217, 142, 2)` : ``}`,
+              color: `${
+                location.pathname === `/projectsPage` ? `red` : `rgb(217, 142, 2)`
+              }`,
+              fontWeight: `${location.pathname == `/projectsPage` ? '600': ''}`
             }}
           >
             Projects
           </NavLink>
-        </div>
-      
-        <div className="col-4">sonce/mesechina</div>
-      </InnerWrapNavBar>
+        </ul>
+        <ThemeToggle />
+      </div>
     </NavBarDiv>
   );
 };
@@ -50,16 +67,9 @@ const Header = () => {
 export default Header;
 
 const NavBarDiv = styled.div`
-  color: #fff;
   box-shadow: 0 5px 5px -5px #000;
 `;
-
-const InnerWrapNavBar = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-text-align: center;
-width: 85%;
-margin-left: auto;
-margin-right: auto;
-`
+const ImgDiv = styled.img`
+  width: 60px;
+  display: block;
+`;
