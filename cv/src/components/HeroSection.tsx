@@ -1,21 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
+import 'animate.css';
 
 
 const HeroSection = () => {
   return (
-    <div className="row pb-4" style={{ paddingTop: `60px` }}>
-    <div className="container">
+    <div className="row pb-4 " style={{ paddingTop: `60px` }}>
+    <div className="container animate__animated animate__fadeInLeft">
       <div className="row d-flex align-items-center">
-        <div className="col-6">
+        <div className="col-md-6 mb-5">
           <ImageDiv
-            src="../images/IMG_0690.jpg"
-            alt=""
-            className="d-block w-100"
+            src="images/me.jpg"
+            className="w-100"
           />
         </div>
-        <div className="col-6">
+        <div className="col-md-6">
           <h3>Hi! I'm</h3>
           <h1>
             <span style={{ color: `rgb(217, 142, 2)` }}>Kristijan</span>{" "}

@@ -12,7 +12,7 @@ const Header = () => {
         <ImgDiv src={`../images/Kabam_Logo.png`} />
       </NavLink>
       <button
-        className="navbar-toggler"
+        className="navbar-toggler bg-dark navbar-dark"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -20,7 +20,7 @@ const Header = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon "></span>
       </button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">

@@ -21,7 +21,6 @@
   
   .switch,
   .switch__input {
-    display: block;
     -webkit-tap-highlight-color: transparent;
   }
   .switch {
